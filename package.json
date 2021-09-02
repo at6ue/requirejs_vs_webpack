@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "build": "tsc -p .",
+    "build:watch": "tsc -p . -w --sourcemap",
+    "pack": "webpack --env production",
+    "pack:watch": "webpack -w",
+    "clean": "rm -rf dist/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/webpack": "^5.28.0",
+    "requirejs": "^2.3.6",
+    "terser-webpack-plugin": "^5.2.1",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.3.5",
+    "webpack": "^5.51.2",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "i18next": "^20.6.0"
+  }
+}
