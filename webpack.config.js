@@ -1,4 +1,5 @@
 const TerserPlugin = require('terser-webpack-plugin');
+const path = require('path');
 
 /**
  * @type {import('webpack').Configuration}
@@ -10,6 +11,7 @@ module.exports = (env) => {
     mode: 'development',
     entry: './src/index.ts',
     output: {
+      path: path.resolve(__dirname, prod ? 'docs/scripts' : 'public/scripts'),
       filename: 'main_webpack.js'
     },
     module: {

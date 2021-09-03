@@ -1,10 +1,11 @@
 {
   "scripts": {
-    "build": "tsc -p .",
+    "clean": "rm -rf docs/scripts/* public/scripts/*",
+    "build": "tsc -p . --sourcemap",
     "build:watch": "tsc -p . -w --sourcemap",
-    "pack": "webpack --env production",
+    "pack": "webpack",
     "pack:watch": "webpack -w",
-    "clean": "rm -rf dist/*"
+    "deploy": "rm -rf docs/* && cp public/*.* docs && tsc -p . --outDir docs/scripts && webpack --env production"
   },
   "author": "",
   "license": "ISC",
