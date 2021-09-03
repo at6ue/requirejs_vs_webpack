@@ -1,7 +1,11 @@
 export default {
+
   en: {
     translation: {
-      hello_world: "Hello World"
+      hello_world: "Hello World",
+      constructor: "constructor",
+      field: "field",
+      method: "method",
     }
   },
   ja: {
