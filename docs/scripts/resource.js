@@ -4,10 +4,7 @@ define(["require", "exports"], function (require, exports) {
     exports.default = {
         en: {
             translation: {
-                hello_world: "Hello World",
-                constructor: "constructor",
-                field: "field",
-                method: "method",
+                hello_world: "Hello World"
             }
         },
         ja: {
