@@ -1,17 +1,15 @@
-import i18next from "i18next";
-import Resource from "./resource";
+import Resource from './resource';
 
-const lang = document.getElementById('lang') as HTMLSelectElement;
-const hello = document.getElementById('message');
-if (!lang || !hello) throw new Error();
+const id_lang = '#lang';
+const id_message = '#message'
 
 const greeting = async () => {
-    await i18next.init({
-        lng: lang.selectedOptions[0]?.value || 'en',
-        resources: Resource
-    });
-    hello.innerText = i18next.t('hello_world');
+    await i18n.changeLanguage($(id_lang).val()?.toString() || 'en');
+    $(id_message).text(i18n.t('hello_world') as string);
 }
 
-lang.onchange = greeting;
-greeting();
+export const init = async () => {
+    await i18n.init({ resources: Resource });
+    $(id_lang).on('change', greeting);
+    greeting();
+}

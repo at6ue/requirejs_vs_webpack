@@ -8,7 +8,7 @@ module.exports = (env) => {
   const prod = !!env.production;
   return {
     mode: 'development',
-    entry: './src/main.ts',
+    entry: './src/index.ts',
     output: {
       filename: 'main_webpack.js'
     },
