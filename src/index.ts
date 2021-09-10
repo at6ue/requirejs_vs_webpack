@@ -1,7 +1,6 @@
 import i18next from 'i18next';
 import jquery from 'jquery';
 import Child from './child';
-import { init } from './main';
 
 console.log('== loaded ==');
 
@@ -11,4 +10,5 @@ window.i18n = i18next;
 console.log('== construct ==');
 new Child();
 
-init();
+console.log('== dynamic import ==');
+import('./main').then((main) => main.init());

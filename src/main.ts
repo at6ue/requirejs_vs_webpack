@@ -1,11 +1,13 @@
 import Resource from './resource';
 
-const id_lang = '#lang';
-const id_message = '#message'
+console.log('(main) loaded');
+
+const id_lang = $('#lang');
+const id_message = $('#message')
 
 const greeting = async () => {
     await i18n.changeLanguage($(id_lang).val()?.toString() || 'en');
-    $(id_message).text(i18n.t('hello_world') as string);
+    id_message.text(i18n.t<string>('hello_world'));
 }
 
 export const init = async () => {
