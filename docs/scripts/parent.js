@@ -1,18 +1,19 @@
 define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    class Parent {
-        constructor() {
+    var Parent = /** @class */ (function () {
+        function Parent() {
             this.parentProperty = console.log('(parent) property');
             console.log('(parent) constructor');
         }
-        method() {
+        Parent.prototype.method = function () {
             console.log('(parent) class method');
-        }
-        static static_method() {
+        };
+        Parent.static_method = function () {
             console.log('(parent) static method');
-        }
-    }
+        };
+        Parent.field = console.log('(parent) static field');
+        return Parent;
+    }());
     exports.default = Parent;
-    Parent.field = console.log('(parent) static field');
 });

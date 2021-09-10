@@ -33,8 +33,6 @@
 
 /*! ./parent */
 
-/*! ./resource */
-
 /*! ./setPrototypeOf.js */
 
 /*! @babel/runtime/helpers/esm/assertThisInitialized */
@@ -55,13 +53,11 @@
 
 /*! @babel/runtime/helpers/typeof */
 
+/*! AMD require */
+
 /*! i18next */
 
 /*! jquery */
-
-/*!*********************!*\
-  !*** ./src/main.ts ***!
-  \*********************/
 
 /*!**********************!*\
   !*** ./src/child.ts ***!
@@ -74,10 +70,6 @@
 /*!***********************!*\
   !*** ./src/parent.ts ***!
   \***********************/
-
-/*!*************************!*\
-  !*** ./src/resource.ts ***!
-  \*************************/
 
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
