@@ -1,8 +1,7 @@
 import { i18n } from 'i18next';
 
 declare global {
-    var i18n: i18n;
-    var $: JQueryStatic;
+    const i18n: i18n;
     interface Window {
         i18n: i18n;
         $: JQueryStatic
